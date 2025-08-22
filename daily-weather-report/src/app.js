@@ -38,17 +38,17 @@ async function checkWeather(city) {
 
         // Set the appropriate weather icon based on weather conditions
         if (data.weather[0].main === 'Clouds') {
-            weatherIcon.src = '/img/cloudy-forecast-svgrepo-com.svg';
+            weatherIcon.src = 'public/img/cloudy-forecast-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Clear') {
-            weatherIcon.src = '/img/egg-sunny-side-up-svgrepo-com.svg';
+            weatherIcon.src = 'public/img/egg-sunny-side-up-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Rain') {
-            weatherIcon.src = '/img/rain-svgrepo-com (2).svg';
+            weatherIcon.src = 'public/img/rain-svgrepo-com (2).svg';
         } else if (data.weather[0].main === 'Drizzle') {
-            weatherIcon.src = '/img/cloud-drizzle-svgrepo-com.svg';
+            weatherIcon.src = 'public/img/cloud-drizzle-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Mist') {
-            weatherIcon.src = '/img/mist-svgrepo-com.svg';
+            weatherIcon.src = 'public/img/mist-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Snow') {
-            weatherIcon.src = '/img/snowing-forecast-svgrepo-com.svg';
+            weatherIcon.src = 'public/img/snowing-forecast-svgrepo-com.svg';
         }
     } else {
         // Handle case if the city is not found
