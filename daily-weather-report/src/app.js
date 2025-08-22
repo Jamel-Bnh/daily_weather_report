@@ -1,5 +1,4 @@
-require('dotenv').config();
-const apiKey = process.env.API_KEY;
+const apiKey = import.meta.env.VITE_API_KEY;
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 
 const searchBox = document.querySelector('.search input');
@@ -39,17 +38,17 @@ async function checkWeather(city) {
 
         // Set the appropriate weather icon based on weather conditions
         if (data.weather[0].main === 'Clouds') {
-            weatherIcon.src = 'assets/img/cloudy-forecast-svgrepo-com.svg';
+            weatherIcon.src = '/img/cloudy-forecast-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Clear') {
-            weatherIcon.src = 'assets/img/egg-sunny-side-up-svgrepo-com.svg';
+            weatherIcon.src = '/img/egg-sunny-side-up-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Rain') {
-            weatherIcon.src = 'assets/img/rain-svgrepo-com (2).svg';
+            weatherIcon.src = '/img/rain-svgrepo-com (2).svg';
         } else if (data.weather[0].main === 'Drizzle') {
-            weatherIcon.src = 'assets/img/cloud-drizzle-svgrepo-com.svg';
+            weatherIcon.src = '/img/cloud-drizzle-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Mist') {
-            weatherIcon.src = 'assets/img/mist-svgrepo-com.svg';
+            weatherIcon.src = '/img/mist-svgrepo-com.svg';
         } else if (data.weather[0].main === 'Snow') {
-            weatherIcon.src = 'assets/img/snowing-forecast-svgrepo-com.svg';
+            weatherIcon.src = '/img/snowing-forecast-svgrepo-com.svg';
         }
     } else {
         // Handle case if the city is not found
